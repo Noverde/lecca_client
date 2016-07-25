@@ -1,0 +1,15 @@
+test:
+  credentials:
+    ftp_username: 'noverde'
+    ftp_password: '1234'
+  proposal:
+    codigo_produto: 'PROD'
+    codigo_agencia: '000A'
+    codigo_rede: '95529'
+    digito_rede: '9'
+    codigo_loja: '10936'
+    digito_loja: '3'
+    nome_loja: 'NOVERDE'
+    codigo_tabela_juros: 112
+    forma_liberacao: 'D'
+    forma_liquidacao: 'I'

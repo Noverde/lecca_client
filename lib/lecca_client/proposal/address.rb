@@ -1,35 +1,39 @@
 module LeccaClient
   module Proposal
     class Address < Hashie::Dash
-      property :codigo_produto, required: true
-      property :data_operacao
-      property :codigo_agencia
-      property :codigo_rede
-      property :digito_rede
-      property :codigo_loja
-      property :digito_loja
-      property :nome_loja
-      property :numero_operacao
-      property :codigo_tabelo_juros
-      property :taxa_juros
-      property :data_primeira_parcela
-      property :valor_compra
-      property :valor_entrada
-      property :valor_principal
-      property :valor_cac
-      property :quantidade_parcela
-      property :valor_parcela
-      property :valor_ioc
-      property :forma_liberacao
-      property :forma_liquidacao
-      property :digito_agencia
-      property :digito_conta
-      property :nome_favorecido
-      property :praca_doc
-      property :banco
+      include LeccaClient::Utils
+
+      property :endereco, required: true
+      property :numero, required: true
+      property :complemento
+      property :uf, required: true
+      property :bairro, required: true
+      property :cidade, required: true
+      property :pais, required: true
+      property :cep, required: true
 
       def build
-        '1'
+        parts = ''
+
+        parts << justify_number(tipo_residencia, 1)
+        parts << justify_string(endereco, 60)
+        parts << justify_number(numero, 5)
+        parts << justify_string(complemento, 30)
+        parts << justify_string(uf, 2)
+        parts << justify_string(bairro, 30)
+        parts << justify_string(cidade, 40)
+        parts << justify_number(pais, 5)
+        parts << justify_string(cep, 8)
+      end
+
+      private
+
+      def tipo_residencia
+        1 # fixed value from Lecca docs
+      end
+
+      def pais
+        1 # fixed value from Lecca docs
       end
     end
   end

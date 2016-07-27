@@ -17,13 +17,12 @@ module LeccaClient
       property :data_primeira_parcela, required: true
       property :valor_compra, required: true
       property :valor_entrada
-      # property :valor_principal, required: true
       property :valor_cac
-      # property :quantidade_parcela, required: true
-      # property :valor_parcela, required: true
+      property :quantidade_parcela, required: true
+      property :valor_parcela, required: true
       property :valor_ioc
-      # property :forma_liberacao, required: true, default: LeccaClient.config.proposal[:forma_liberacao]
-      # property :forma_liquidacao, required: true, default: LeccaClient.config.proposal[:forma_liquidacao]
+      property :forma_liberacao, required: true, default: LeccaClient.config.proposal[:forma_liberacao]
+      property :forma_liquidacao, required: true, default: LeccaClient.config.proposal[:forma_liquidacao]
       property :digito_agencia_doc
       property :digito_conta_doc
       property :nome_favorecido_doc
@@ -53,7 +52,32 @@ module LeccaClient
 
         parts << justify_string(data_primeira_parcela, 8)
         parts << justify_value(valor_compra, 15)
+        parts << justify_value(valor_entrada, 15)
+        parts << justify_value(valor_principal, 15)
+        parts << justify_value(valor_cac, 15)
+        parts << justify_number(quantidade_parcela, 3)
+        parts << justify_value(valor_parcela, 15)
+        parts << justify_value(valor_ioc, 15)
 
+        parts << justify_string(forma_liberacao, 1)
+        parts << justify_string(forma_liquidacao, 1)
+
+        parts << justify_string(digito_agencia_doc, 1)
+        parts << justify_string(digito_conta_doc, 2)
+        parts << justify_string(nome_favorecido_doc, 35)
+        parts << justify_number(praca_doc, 3)
+        parts << justify_number(banco_doc, 3)
+        parts << justify_number(agencia_doc, 4)
+        parts << justify_number(conta_doc, 8)
+        parts << justify_number(cpf_doc, 14)
+        parts << justify_string(tac_financiada, 1)
+        parts << justify_value(valor_doc, 15)
+      end
+
+      private
+
+      def valor_principal
+        valor_compra
       end
     end
   end

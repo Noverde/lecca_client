@@ -1,22 +1,10 @@
 require 'spec_helper'
+require 'support/proposal_mock'
 
 describe LeccaClient::Proposal::Customer do
   subject(:customer) { LeccaClient::Proposal::Customer.new(customer_hash) }
 
-  let(:customer_hash) do
-    {
-      nome: 'FERNANDA LINS DA COSTA',
-      numero_rg: '219087608',
-      nome_mae: 'LUZINETE RAMOS LINS DA COSTA',
-      orgao_emissor_rg: 'DIC',
-      descricao_profissao: 'ASSALARIADO',
-      descricao_cargo: 'PRECESSA GIS',
-      cpf: '11861257724',
-      data_nascimento: '19870924',
-      valor_salario_liquido: 2275.00,
-      observacao: '<font color=green><font color=green><br><b>REGRAS</b><br><br>CLIENTE (NOVO) NAO POSSUI CONTRATOS NA BASE (QUITADOS OU ABERTOS)<BR></font><br><br> Usuario Conectado: VSIMONIN<br></font>'
-    }
-  end
+  let(:customer_hash) { ProposalMock.customer }
 
   describe '#build' do
     let(:line) { 'FERNANDA LINS DA COSTA                                      00001  219087608                                                                                 LUZINETE RAMOS LINS DA COSTA       DIC    ASSALARIADO                        PRECESSA GIS                       11861257724198709240000000100000022750000000000<font color=green><font color=green><br><b>REGRAS</b><br><br>CLIENTE (NOVO) NAO POSSUI CONTRATOS NA BASE (QUITADOS OU ABERTOS)<BR></font><br><br> Usuario Conectado: VSIMONIN<br></font>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ' }

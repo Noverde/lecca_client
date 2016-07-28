@@ -1,8 +1,8 @@
 require 'spec_helper'
 require 'support/proposal_mock'
 
-describe LeccaClient::Proposal::Generator do
-  subject(:generator) { LeccaClient::Proposal::Generator.new(params) }
+describe LeccaClient::Proposal::Builder do
+  subject(:generator) { LeccaClient::Proposal::Builder.new(params) }
 
   let(:fixture_proposal) { File.read(File.expand_path('../../../fixtures/sample_proposal.txt', __FILE__)).chomp }
 

@@ -1,6 +1,6 @@
 module LeccaClient
   module Proposal
-    class Generator < Hashie::Dash
+    class Builder < Hashie::Dash
       include Hashie::Extensions::Dash::Coercion
 
       property :operacao, coerce: Operation, required: true

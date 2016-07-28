@@ -13,8 +13,8 @@ module LeccaClient
       @environment || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || raise('You must set the environment!')
     end
 
-    def credentials
-      config['credentials']
+    def ftp
+      config['ftp']
     end
 
     def proposal

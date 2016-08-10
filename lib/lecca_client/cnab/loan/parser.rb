@@ -3,8 +3,8 @@ require 'ostruct'
 module LeccaClient::CNAB
   module Loan
     class Parser
-      def initialize(file_path)
-        @rows = ::File.readlines(file_path)
+      def initialize(raw_file)
+        @rows = raw_file.split("\n")
       end
 
       def parse

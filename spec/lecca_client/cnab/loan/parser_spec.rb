@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe LeccaClient::CNAB::Loan::Parser do
   describe '#parse' do
-    subject(:file) { described_class.new(File.expand_path('spec/fixtures/sample_de_para.txt')).parse }
+    subject(:file) { described_class.new(File.read(File.expand_path('spec/fixtures/sample_de_para.txt'))).parse }
 
     describe 'header' do
       it 'parses file header' do

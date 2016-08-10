@@ -22,9 +22,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency 'testftpd', "~> 0.2"
 
   spec.add_dependency "hashie", "~> 3.4"
   spec.add_dependency "activesupport", "~> 5.0"
   spec.add_dependency "pry-byebug", "~> 3.4"
+  spec.add_dependency "net-sftp", "~> 2.1"
 end

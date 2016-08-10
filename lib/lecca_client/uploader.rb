@@ -1,5 +1,4 @@
-require 'net/ftp'
-require 'tempfile'
+require 'net/sftp'
 
 module LeccaClient
   class Uploader
@@ -9,32 +8,14 @@ module LeccaClient
     end
 
     def upload
-      connection.putbinaryfile(file, @filename)
-    end
-
-    private
-
-    def connection
-      @connection ||= connect!
-    end
-
-    def file
-      @file ||= begin
-        tempfile = Tempfile.new
-        tempfile.write(@text)
-        tempfile.close
-
-        tempfile
+      Net::SFTP.start(config[:host], config[:user], password: config[:pass]) do |sftp|
+        sftp.file.open([config[:upload_path].to_s, @filename].join('/'), "w") do |file|
+          file.puts @text
+        end
       end
     end
 
-    def connect!
-      ftp = Net::FTP.new
-      ftp.connect(config[:host], config[:port])
-      ftp.login(config[:user], config[:pass])
-
-      ftp
-    end
+    private
 
     def config
       @config ||= LeccaClient.config.ftp

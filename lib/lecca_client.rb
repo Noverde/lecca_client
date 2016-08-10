@@ -21,3 +21,7 @@ require 'lecca_client/proposal/job'
 require 'lecca_client/proposal/bank_account'
 require 'lecca_client/proposal/builder'
 
+require 'lecca_client/cnab/loan/parser'
+require 'lecca_client/cnab/loan/file/header'
+require 'lecca_client/cnab/loan/file/detail'
+require 'lecca_client/cnab/loan/file/trailler'

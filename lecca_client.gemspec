@@ -6,10 +6,10 @@ require 'lecca_client/version'
 Gem::Specification.new do |spec|
   spec.name          = "lecca_client"
   spec.version       = LeccaClient::VERSION
-  spec.authors       = ["Noverde Team", "Rafael Izidoro"]
-  spec.email         = ["dev@noverde.com.br", "izidoro.rafa@gmail.com"]
+  spec.authors       = ["Noverde Team", "Rafael Izidoro", "Alexandre Santos"]
+  spec.email         = ["dev@noverde.com.br", "izidoro.rafa@gmail.com", "alexandre.sns@gmail.com"]
 
-  spec.summary       = %q{Lecca DTVM LTDA integration}
+  spec.summary       = %q{Lecca DTVM LTDA client}
   spec.description   = %q{This gem is responsible for exchange proposal and CNAB files between your system and Lecca DTVM.}
   spec.homepage      = "https://github.com/noverde/lecca_client"
   spec.license       = "MIT"

@@ -16,3 +16,4 @@ test:
     codigo_tabela_juros: 112
     forma_liberacao: 'D'
     forma_liquidacao: 'I'
+  timezone: 'America/Sao_Paulo'

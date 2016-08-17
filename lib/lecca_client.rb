@@ -7,9 +7,9 @@ module LeccaClient
 end
 
 require 'hashie'
+require 'lecca_client/configuration'
 require 'lecca_client/active_support'
 require 'lecca_client/version'
-require 'lecca_client/configuration'
 require 'lecca_client/utils'
 require 'lecca_client/uploader'
 require 'lecca_client/downloader'

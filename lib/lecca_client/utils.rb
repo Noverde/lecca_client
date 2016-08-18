@@ -9,8 +9,7 @@ module LeccaClient
     end
 
     def justify_value(value, length, decimal_places = 2)
-      value ||= 0
-      ("%.#{decimal_places}f" % value).gsub(/[.,]/, '').rjust(length, '0')
+      ("%.#{decimal_places}f" % (value || 0)).gsub(/[.,]/, '').rjust(length, '0')
     end
   end
 end

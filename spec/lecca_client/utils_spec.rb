@@ -27,5 +27,11 @@ describe LeccaClient::Utils do
         expect(utils.justify_value(6000.30, 12, 4)).to eq('000060003000')
       end
     end
+
+    context 'with a nil value' do
+      it 'justifies given value and decimal places' do
+        expect(utils.justify_value(nil, 12, 4)).to eq('000000000000')
+      end
+    end
   end
 end

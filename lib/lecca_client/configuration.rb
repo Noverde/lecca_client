@@ -10,7 +10,7 @@ module LeccaClient
     end
 
     def environment
-      @environment || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || raise('You must set the environment!')
+      @environment || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
     end
 
     def ftp

@@ -20,7 +20,7 @@ module LeccaClient
       property :valor_cac
       property :quantidade_parcela, required: true
       property :valor_parcela, required: true
-      property :valor_ioc
+      property :valor_ioc, require: true
       property :forma_liberacao, required: true, default: LeccaClient.config.proposal[:forma_liberacao]
       property :forma_liquidacao, required: true, default: LeccaClient.config.proposal[:forma_liquidacao]
       property :digito_agencia_doc

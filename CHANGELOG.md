@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.2.1
+
+* Fix phone ddd
+* Add valor cac as required
+
 ## 0.2.0
 
 * Add development as default env

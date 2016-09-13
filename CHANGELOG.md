@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.0
+
+* Add development as default env
+
 ## 0.1.2
 
 * Fix on utils justify value

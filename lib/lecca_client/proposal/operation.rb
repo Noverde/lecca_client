@@ -17,7 +17,7 @@ module LeccaClient
       property :data_primeira_parcela, required: true
       property :valor_compra, required: true
       property :valor_entrada
-      property :valor_cac
+      property :valor_cac, require: true
       property :quantidade_parcela, required: true
       property :valor_parcela, required: true
       property :valor_ioc

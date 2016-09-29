@@ -8,10 +8,9 @@ describe LeccaClient::Proposal::Address do
 
   describe '#build' do
     let(:line) { '1Rua Alba Valdez                                             00228CASA                          RJCpo Grande                    Rio de Janeiro                          0000123075130' }
-    
+
     it 'builds the address part' do
       expect(address.build).to eq(line)
     end
   end
 end
-

@@ -7,8 +7,8 @@ describe LeccaClient::Proposal::Phone do
   let(:phone_hash) { ProposalMock.phone }
 
   describe '#build' do
-    let(:line) { '0021000035075164000982512776                                                  0021' }
-    
+    let(:line) { '21  000035075164000982512776                                                  21  ' }
+
     it 'builds the phone part' do
       expect(phone.build).to eq(line)
     end

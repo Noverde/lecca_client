@@ -21,10 +21,6 @@ module LeccaClient
       config['proposal']
     end
 
-    def timezone
-      config['timezone']
-    end
-
     private
 
     def config

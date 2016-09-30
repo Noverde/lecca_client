@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.0
+
+* Remove useless time.zone config
+
 ## 0.2.1
 
 * Fix phone ddd

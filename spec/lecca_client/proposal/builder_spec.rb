@@ -12,7 +12,8 @@ describe LeccaClient::Proposal::Builder do
       endereco: ProposalMock.address,
       telefone: ProposalMock.phone,
       emprego: ProposalMock.job,
-      conta_bancaria: ProposalMock.bank_account
+      conta_bancaria: ProposalMock.bank_account,
+      fundo: ProposalMock.fund
     }
   end
 

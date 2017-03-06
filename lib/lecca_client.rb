@@ -21,6 +21,7 @@ require 'lecca_client/proposal/phone'
 require 'lecca_client/proposal/address'
 require 'lecca_client/proposal/job'
 require 'lecca_client/proposal/bank_account'
+require 'lecca_client/proposal/fund'
 require 'lecca_client/proposal/builder'
 
 require 'lecca_client/cnab/loan/parser'

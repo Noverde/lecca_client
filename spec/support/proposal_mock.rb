@@ -86,5 +86,11 @@ class ProposalMock
         conta: '21464'
       }
     end
+
+    def fund
+      {
+        rating: 'A',
+      }
+    end
   end
 end

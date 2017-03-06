@@ -9,9 +9,10 @@ module LeccaClient
       property :telefone, coerce: Phone, required: true
       property :emprego, coerce: Job, required: true
       property :conta_bancaria, coerce: BankAccount , required: true
+      property :fundo, coerce: Fund, required: true
 
       def line
-        [operacao, cliente, endereco, telefone, emprego, conta_bancaria].map(&:build).reduce(:+)
+        [operacao, cliente, endereco, telefone, emprego, conta_bancaria, fundo].map(&:build).reduce(:+)
       end
 
       def upload

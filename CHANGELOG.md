@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.4.0
+
+* Add fund part in proposal file
+
 ## 0.3.0
 
 * Remove useless time.zone config

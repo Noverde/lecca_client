@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.4.1
+
+* Fix annoying hashie warning
+
 ## 0.4.0
 
 * Add fund part in proposal file

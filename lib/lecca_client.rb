@@ -7,6 +7,9 @@ module LeccaClient
 end
 
 require 'hashie'
+# https://github.com/intridea/hashie/issues/391#issuecomment-276490533
+Hashie.logger = Logger.new(nil)
+
 require 'lecca_client/configuration'
 require 'lecca_client/active_support'
 require 'lecca_client/version'
